@@ -39,11 +39,11 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSum {
+public class TwoSum_1 {
     public static void main(String[] args) {
         int[] nums = new int[]{3, 2, 4};
         int target = 6;
-        final int[] resArray = new TwoSum().twoSum(nums, target);
+        final int[] resArray = new TwoSum_1().twoSum(nums, target);
         System.out.println(Arrays.toString(resArray));
     }
 
