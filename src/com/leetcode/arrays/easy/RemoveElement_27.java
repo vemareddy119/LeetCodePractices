@@ -52,7 +52,7 @@ package src.com.leetcode.arrays.easy;
 
 import java.util.Arrays;
 
-public class RemoveElement {
+public class RemoveElement_27 {
     public static void main(String[] args) {
         int[] nums = {0, 1, 2, 2, 3, 0, 4, 2};
         int var = 2;
@@ -62,16 +62,12 @@ public class RemoveElement {
     }
 
     // TimeComplexity = O(n) 2. Space Complexity = O(1)
-    private static int removeElement(int[] nums, int var) {
-        int[] dummyArray = Arrays.copyOf(nums, nums.length);
+    private static int removeElement(int[] nums, int val) {
         int k = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (dummyArray[i] != var) {
-                nums[k] = dummyArray[i];
+            if (nums[i] != val) {
+                nums[k] = nums[i];
                 k++;
-            }
-            if (dummyArray[i] == var && i == nums.length - 1) {
-                nums[i] = 0;
             }
         }
         return k;
