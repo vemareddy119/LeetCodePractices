@@ -42,10 +42,9 @@ public class SearchInsertPosition_35 {
                 return i;
             } else if (nums[i] > target) {
                 return i;
-            }else if(nums.length-1 == i && nums[i] < target){
+            } else if (nums.length - 1 == i && nums[i] < target) {
                 return nums.length;
             }
-
         }
         return -1;
     }
