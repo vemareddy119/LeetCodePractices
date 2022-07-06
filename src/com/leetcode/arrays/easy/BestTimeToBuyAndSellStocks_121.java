@@ -2,7 +2,7 @@ package src.com.leetcode.arrays.easy;
 
 public class BestTimeToBuyAndSellStocks_121 {
     public static void main(String[] args) {
-        int[] prices = {2,1,2,1,0,1,2};
+        int[] prices = {2, 1, 2, 1, 0, 1, 2};
         System.out.println(maxProfit(prices));
     }
 
@@ -11,16 +11,16 @@ public class BestTimeToBuyAndSellStocks_121 {
         int op = 0;
         int pist = 0;
 
-        for(int i = 0; i < prices.length; i++){
-            if(prices[i] < lsf){
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < lsf) {
                 lsf = prices[i];
             }
             pist = prices[i] - lsf;
-            if(op < pist){
+            if (op < pist) {
                 op = pist;
             }
         }
         return op;
     }
-    
+
 }

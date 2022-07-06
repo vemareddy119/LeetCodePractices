@@ -35,7 +35,7 @@ public class PaskalsTriangle_118 {
     }
 
 
-// 1. TimeComplexity = O(n2) 2. SpaceComplexity = O(n)
+    // 1. TimeComplexity = O(n2) 2. SpaceComplexity = O(n)
     public static List<List<Integer>> generate(int numRows) {
         int i = 0;
         List<List<Integer>> listList = new ArrayList<>();

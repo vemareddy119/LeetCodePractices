@@ -33,6 +33,7 @@ public class PaskalsTriangle_11_119 {
     public static void main(String[] args) {
         System.out.println(generate(3));
     }
+
     // 1. TimeComplexity = O(n2) 2. SpaceComplexity = O(n)
     public static List<Integer> generate(int rowIndex) {
         int i = 0;

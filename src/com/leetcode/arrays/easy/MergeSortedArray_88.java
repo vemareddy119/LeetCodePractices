@@ -51,6 +51,7 @@ public class MergeSortedArray_88 {
         mergeSortedArray(nums1, nums2, m, n);
         System.out.println(Arrays.toString(nums1));
     }
+
     // 1. TimeComplexity = O(n) 2. SpaceComplexity = O(1)
     private static void mergeSortedArray(int[] nums1, int[] nums2, int m, int n) {
         int pointer1 = m - 1, pointer2 = n - 1, i = (n + m) - 1;
