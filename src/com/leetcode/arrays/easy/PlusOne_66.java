@@ -40,7 +40,7 @@ import java.util.Arrays;
 
 public class PlusOne_66 {
     public static void main(String[] args) {
-        int nums[] = {9};
+        int nums[] = {9, 1, 2, 1, 4, 2, 9};
         final int[] res = plusOne(nums);
         System.out.println(Arrays.toString(res));
     }
@@ -79,7 +79,7 @@ public class PlusOne_66 {
                 return digits;
             }
         } else {
-            digits[digits.length - 1] = digits[digits.length - 1] + 1;
+            digits[2] = digits[digits.length - 1] + 1;
             return digits;
         }
 

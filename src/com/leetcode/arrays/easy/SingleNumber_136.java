@@ -24,11 +24,12 @@ public class SingleNumber_136 {
         }
         return -1;
     }*/
-//1.TimeComplexity=O(n) 2.SpaceComplexity=O(n)
+//1.TimeComplexity=O(n) 2.SpaceComplexity=O(1)
     public static int singleNumber(int[] nums) {
-
+    // 9 = 0 1 0 1
+        //1 =00000
+        // 1=0000
         int x = 0;
-
         for (int i = 0; i < nums.length; i++) {
 
             x = x ^ nums[i];
