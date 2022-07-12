@@ -50,22 +50,29 @@ public class SummaryRanges_228 {
         System.out.println(summaryRanges(nums));
     }
 
-    // "0->1->"
+    //1. Time Complexity = O(n) 2.Space Complexity = O(n)
     private static List<String> summaryRanges(int[] nums) {
-        ArrayList<String> al=new ArrayList<>();
-
-        for(int i=0;i<nums.length;i++){
-            int start=nums[i];
-            while(i+1<nums.length && nums[i]+1==nums[i+1])
-                i++;
-
-            if(start!=nums[i]){
-                al.add(""+start+"->"+nums[i]);
-            }
-            else{
-                al.add(""+start);
+        List<String> list = new ArrayList<>();
+        String s = "";
+        for (int i = 0; i < nums.length; i++) {
+            if (i == 0) {
+                s = nums[i] + "";
+            } else {
+                if (nums[i] - nums[i - 1] == 1) {
+                    if (s.contains("->" + nums[i - 1])) {
+                        s = s.replace("->" + nums[i - 1], "");
+                    }
+                    s = s + "->" + nums[i];
+                } else {
+                    list.add(s);
+                    s = nums[i] + "";
+                }
             }
         }
-        return al;
+        if (!s.isEmpty()) {
+            list.add(s);
+        }
+
+        return list;
     }
 }
